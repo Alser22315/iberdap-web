@@ -1,0 +1,186 @@
+/* ============================================================
+   IBERDAP · Sistema visual (Propuesta E aprobada 20/06/2026)
+   Hoja de estilos compartida por home + landings de área.
+   Paleta IBERDAP + sistema MSerrano. Oswald (titulares) + Lato (cuerpo).
+   ============================================================ */
+
+:root{
+  --azul:#1B4A6B;--azul2:#1F77A8;--turq:#2DB5A8;--turq-d:#1f8e83;--turq-soft:#e3f6f3;
+  --ink:#16252e;--body:#54636d;--mut:#8a99a3;--line:#dde7ea;--soft:#f4f8f8;--soft2:#eaf3f3;
+  --grad:linear-gradient(135deg,#2DB5A8 0%,#1F77A8 48%,#1B4A6B 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',Helvetica,Arial,sans-serif;color:var(--body);background:#fff;line-height:1.72}
+h1,h2,h3,h4{font-family:'Oswald',sans-serif;color:var(--azul);font-weight:600;line-height:1.13;text-transform:uppercase;letter-spacing:.01em}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+
+.wrap{max-width:1150px;margin:0 auto;padding:0 26px}
+.eyebrow{font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;color:var(--turq-d)}
+.sec{padding:92px 0}
+.sec h2{font-size:clamp(1.8rem,3.6vw,2.7rem);margin:12px 0}
+.lead{font-size:1.08rem;max-width:610px}
+.center{text-align:center}.center .lead{margin:0 auto}
+.alt{background:var(--soft)}
+
+/* ---- Botones ---- */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:.92rem;padding:14px 27px;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:.2s}
+.btn-turq{background:var(--turq);color:#06342e}.btn-turq:hover{background:var(--turq-d);color:#fff;transform:translateY(-2px)}
+.btn-azul{background:var(--azul);color:#fff}.btn-azul:hover{background:#143850;transform:translateY(-2px)}
+.btn-line{border-color:var(--line);color:var(--azul);background:#fff}.btn-line:hover{border-color:var(--turq)}
+.btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}.btn-ghost:hover{background:rgba(255,255,255,.12)}
+
+/* ---- Navegación ---- */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:78px;gap:18px}
+.nav-in .logo{height:46px}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{font-family:'Oswald';font-weight:500;text-transform:uppercase;font-size:.86rem;letter-spacing:.03em;color:var(--azul)}.nav-links a:hover{color:var(--turq-d)}
+
+/* ---- Hero (home) ---- */
+.hero{position:relative;background:var(--grad);color:#fff;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-130px;top:-60px;width:560px;height:560px;background:url('iberdap-icon-white.png') no-repeat center/contain;opacity:.10}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;padding:82px 0}
+.hero h1{color:#fff;font-size:clamp(2.2rem,4.8vw,3.7rem);margin:16px 0}
+.hero h1 em{font-style:normal;color:#bff3ec}
+.hero p.sub{font-size:1.18rem;color:#eafaf7;max-width:520px}
+.hero .eyebrow{color:#bff3ec}
+.hero-cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+.hero-photo{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:5/4;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2)}
+.hero-photo .ph{position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.85);font-family:'Oswald';text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;text-align:center;padding:20px}
+.hero-photo .card-fl{position:absolute;left:16px;bottom:16px;right:16px;background:rgba(255,255,255,.95);border-radius:13px;padding:14px 17px;display:flex;align-items:center;gap:12px}
+.hero-photo .card-fl img{height:30px}
+.hero-photo .card-fl b{font-family:'Oswald';color:var(--azul);text-transform:uppercase;font-size:.9rem;display:block}
+.hero-photo .card-fl p{font-size:.8rem;color:var(--body);margin:0}
+
+/* ---- Hero compacto (landings de área) ---- */
+.ahero{position:relative;background:var(--grad);color:#fff;overflow:hidden}
+.ahero::after{content:"";position:absolute;right:-120px;top:-80px;width:480px;height:480px;background:url('../assets/iberdap-icon-white.png') no-repeat center/contain;opacity:.10}
+.ahero-in{position:relative;z-index:2;padding:64px 0 70px;max-width:760px}
+.ahero .crumbs{font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:.74rem;color:#bff3ec;margin-bottom:14px}
+.ahero .crumbs a{color:#bff3ec;opacity:.85}.ahero .crumbs a:hover{opacity:1}
+.ahero h1{color:#fff;font-size:clamp(2rem,4.4vw,3.2rem);margin:6px 0 16px}
+.ahero h1 em{font-style:normal;color:#bff3ec}
+.ahero p.sub{font-size:1.14rem;color:#eafaf7;max-width:600px}
+.ahero .hero-cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:26px}
+.ahero .badge{display:inline-block;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:.7rem;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);color:#fff;padding:5px 13px;border-radius:999px;margin-bottom:6px}
+
+/* ---- Aval MSerrano ---- */
+.aval{background:var(--soft);border-bottom:1px solid var(--line)}
+.aval-in{display:flex;align-items:center;justify-content:center;gap:22px;padding:20px 0;flex-wrap:wrap}
+.aval-in img{height:46px;background:#fff;padding:7px 12px;border-radius:8px;border:1px solid var(--line)}
+.aval-in p{font-family:'Lato';color:var(--azul);font-weight:700;font-size:.95rem}.aval-in p span{display:block;color:var(--body);font-weight:400;font-size:.82rem}
+
+/* ---- Áreas (lista en home) ---- */
+.areas{display:flex;flex-direction:column;gap:14px;margin-top:46px}
+.area{display:grid;grid-template-columns:66px 1fr auto;gap:20px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 26px;transition:.22s}
+.area:hover{border-color:var(--turq);box-shadow:0 18px 40px -28px rgba(27,74,107,.4);transform:translateX(4px)}
+.area .ic{width:66px;height:66px;border-radius:16px;background:var(--turq-soft);display:grid;place-items:center;font-size:1.7rem}
+.area:nth-child(even) .ic{background:var(--soft2)}
+.area h3{font-size:1.22rem;margin-bottom:3px}
+.area p{font-size:.94rem;margin:0;max-width:560px}
+.area .r{display:flex;align-items:center;gap:14px}
+.area .pill{font-family:'Oswald';font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;color:var(--turq-d);background:var(--turq-soft);padding:5px 11px;border-radius:999px}
+.area .go{font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:.8rem;color:var(--azul);white-space:nowrap;letter-spacing:.03em}.area .go:hover{color:var(--turq-d)}
+
+/* ---- Doble audiencia (empresas vs candidatos) ---- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:46px}
+.aud{border:1px solid var(--line);border-radius:20px;padding:34px;background:#fff;position:relative;overflow:hidden}
+.aud.b2b{background:var(--soft)}
+.aud .tag{font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;color:var(--turq-d);background:var(--turq-soft);display:inline-block;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.aud h3{font-size:1.5rem;margin-bottom:10px}
+.aud p{font-size:.96rem;margin-bottom:18px}
+.aud ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:22px}
+.aud ul li{position:relative;padding-left:26px;font-size:.93rem}
+.aud ul li::before{content:"✓";position:absolute;left:0;top:0;color:var(--turq-d);font-weight:900}
+
+/* ---- Beneficios / grid de tarjetas ---- */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px}
+.bcard{border:1px solid var(--line);border-radius:18px;padding:28px;background:#fff;transition:.22s}
+.bcard:hover{border-color:var(--turq);box-shadow:0 18px 40px -30px rgba(27,74,107,.4);transform:translateY(-3px)}
+.bcard .ic{width:54px;height:54px;border-radius:14px;background:var(--turq-soft);display:grid;place-items:center;font-size:1.5rem;margin-bottom:16px}
+.bcard h3{font-size:1.12rem;margin-bottom:8px}
+.bcard p{font-size:.92rem;margin:0}
+
+/* ---- Stats ---- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:42px}
+.stat{text-align:center;padding:18px}
+.stat b{display:block;font-family:'Oswald';font-weight:700;color:var(--turq-d);font-size:clamp(2rem,4vw,2.8rem);line-height:1}
+.stat span{font-size:.86rem;color:var(--body)}
+
+/* ---- Embudo / pasos ---- */
+.funnel{background:var(--azul);color:#fff}
+.funnel h2{color:#fff}.funnel .eyebrow{color:var(--turq)}.funnel .lead{color:#cfe0e8}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px}
+.flow .st{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:24px;text-align:center;position:relative}
+.flow .st .n{width:44px;height:44px;border-radius:50%;background:var(--turq);color:#06342e;font-family:'Oswald';font-weight:700;font-size:1.2rem;display:grid;place-items:center;margin:0 auto 12px}
+.flow .st b{display:block;font-family:'Oswald';text-transform:uppercase;color:#fff;font-size:1rem;margin-bottom:5px;letter-spacing:.02em}
+.flow .st p{font-size:.82rem;color:#bcd2dc;margin:0}
+.flow .st::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--turq);font-size:1.15rem}
+.flow .st:last-child::after{display:none}
+
+/* ---- FAQ ---- */
+.faq{max-width:780px;margin:42px auto 0;display:flex;flex-direction:column;gap:12px}
+.faq details{border:1px solid var(--line);border-radius:13px;background:#fff;padding:4px 22px;transition:.2s}
+.faq details[open]{border-color:var(--turq);box-shadow:0 14px 34px -28px rgba(27,74,107,.4)}
+.faq summary{font-family:'Oswald';font-weight:500;text-transform:uppercase;letter-spacing:.02em;color:var(--azul);font-size:1rem;padding:16px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.4rem;color:var(--turq-d);transition:.2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{font-size:.94rem;padding:0 0 18px}
+
+/* ---- Banda CTA ---- */
+.band{background:var(--grad);color:#fff;border-radius:22px;padding:48px;text-align:center;margin-top:8px}
+.band h2{color:#fff;margin-bottom:10px}
+.band p{color:#eafaf7;max-width:560px;margin:0 auto 24px}
+.band .hero-cta{justify-content:center}
+
+/* ---- Formulario ---- */
+.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.testi{background:var(--turq-soft);border-radius:20px;padding:34px}
+.testi .q{font-family:'Oswald';font-weight:400;color:var(--azul);font-size:1.38rem;line-height:1.42}
+.testi .who{display:flex;align-items:center;gap:12px;margin-top:20px}
+.testi .av{width:46px;height:46px;border-radius:50%;background:var(--grad)}
+.testi .who b{font-family:'Lato';color:var(--ink);font-size:.95rem;display:block}.testi .who span{font-size:.82rem;color:var(--body)}
+.fcard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:0 22px 50px -32px rgba(27,74,107,.4)}
+.fcard h3{font-size:1.3rem;margin-bottom:4px}.fcard .fp{font-size:.84rem;color:var(--mut);margin-bottom:20px}
+.field{margin-bottom:14px}.field.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-family:'Oswald';font-weight:500;text-transform:uppercase;font-size:.72rem;letter-spacing:.04em;color:var(--azul);margin-bottom:6px}
+input,select,textarea{width:100%;font-family:'Lato';font-size:.95rem;padding:13px 15px;border:1.5px solid var(--line);border-radius:11px;background:var(--soft);resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--turq);background:#fff}
+.fcard .btn{width:100%;justify-content:center;margin-top:6px}
+.form-note{font-size:.76rem;color:var(--mut);margin-top:12px;text-align:center}
+.form-msg{display:none;border-radius:11px;padding:13px;margin-top:12px;font-size:.9rem}
+.form-msg.ok{background:var(--turq-soft);border:1px solid var(--turq);color:#0d6b5b}
+.form-msg.err{background:#fdecec;border:1px solid #e6a0a0;color:#9a2b2b}
+.fcard.busy{opacity:.7;pointer-events:none}
+
+/* ---- Footer ---- */
+footer{background:#0f3349;color:#a9c2d0;padding:56px 0 26px}
+.f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.12)}
+.f-lock{display:flex;align-items:center;gap:11px;margin-bottom:13px}
+.f-lock img{height:44px}.f-lock b{font-family:'Oswald';color:#fff;font-size:1.5rem;text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+footer p.d{font-size:.9rem;color:#9fb9c8;max-width:290px}
+footer h5{font-family:'Oswald';text-transform:uppercase;color:#fff;font-size:.95rem;margin-bottom:14px;letter-spacing:.03em}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}footer ul a{font-size:.88rem;color:#9fb9c8}footer ul a:hover{color:var(--turq)}
+.f-aval{display:flex;align-items:center;gap:12px;margin-top:16px;background:rgba(255,255,255,.06);padding:11px 14px;border-radius:11px}
+.f-aval img{height:34px;background:#fff;padding:5px 8px;border-radius:6px}.f-aval span{font-size:.77rem;color:#cfe0e8}
+.claim{font-family:'Oswald';font-style:italic;color:var(--turq);font-weight:500}
+.f-bot{padding-top:20px;font-size:.8rem;color:#7fa0b1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* ---- Responsive ---- */
+@media(max-width:920px){
+  .hero-in,.form-wrap,.split{grid-template-columns:1fr;gap:36px}
+  .benefits{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}.flow .st::after{display:none}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .area{grid-template-columns:56px 1fr}.area .r{grid-column:1/-1;justify-content:space-between;margin-top:6px}
+}
+@media(max-width:560px){
+  .flow,.field.two,.f-grid,.benefits,.stats{grid-template-columns:1fr}
+  .sec{padding:64px 0}
+  .band{padding:34px 22px}
+}
