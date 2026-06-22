@@ -12,7 +12,7 @@
    NO se incluye ningún token aquí: el secreto vive en Make, no en la web.
    ============================================================ */
 
-const IBERDAP_ENDPOINT = ""; // ← pega aquí la URL del webhook de Make
+const IBERDAP_ENDPOINT = "https://hook.eu1.make.com/lycbfgfju50d52iofhs42co7d1tmlep5"; // webhook Make -> Airtable (Leads Web)
 
 function iberdapInitForms() {
   document.querySelectorAll("form[data-iberdap]").forEach(function (form) {
